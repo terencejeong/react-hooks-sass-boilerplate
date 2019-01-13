@@ -1,0 +1,25 @@
+.staff {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-weight: 800;
+  color: white;
+  &__names {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: solid 2px white;
+    &:hover {
+      background-color: white;
+      color: #5c0dca;
+    }
+  }
+}

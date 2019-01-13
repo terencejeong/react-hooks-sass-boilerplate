@@ -1,0 +1,11 @@
+.appraisal {
+  height: 100vh;
+  &__header {
+    text-align: center;
+  }
+  &__form {
+    position: relative;
+    top: 100px;
+    text-align: center;
+  }
+}

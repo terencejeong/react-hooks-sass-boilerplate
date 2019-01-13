@@ -1,0 +1,68 @@
+@mixin reset-button {
+  overflow : visible;
+  margin : 0;
+  padding : 0;
+  border : 0;
+  background : transparent;
+  font : inherit;
+  line-height : normal;
+  cursor : pointer;
+  -moz-user-select : text;
+
+  &::-moz-focus-inner {
+    padding : 0;
+    border : 0;
+  }
+}
+
+@keyframes stripe-slide {
+  0% { background-position: 0% 0; }
+  100% { background-position: 100% 0; }
+}
+
+
+.btn {
+  @include reset-button;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 16px 36px 22px;
+  background-color: #fff;
+  color: #666;
+  border: solid 2px #666;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  transition: all .5s ease;
+  &--stripe {
+    overflow: hidden;
+    position: relative;
+    &:after {
+      content: '';
+      height: 7px;
+      display: block;
+      width: 100%;
+      background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-top: 1px solid #666;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-size: 7px 7px;
+    }
+    &:hover {
+      background-color: #666;
+      color: #fff;
+      border-color: #fff;
+      &:after {
+        background-image: repeating-linear-gradient( 45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+        border-top: #fff 1px solid;
+        animation: stripe-slide 12s infinite linear forwards;
+      }
+    }
+  }
+  &--large {
+    width: 50%;
+  }
+}

@@ -1,0 +1,11 @@
+.success {
+  height: 100vh;
+  margin: 0 auto;
+  &__message {
+    text-transform: uppercase;
+    color: white;
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+  }
+}

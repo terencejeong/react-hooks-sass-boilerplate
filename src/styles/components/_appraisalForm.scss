@@ -1,0 +1,15 @@
+.form {
+  > textarea {
+    color: white;
+    font-size: 3em;
+    font-weight: 800;
+    background: transparent;
+    width: 80%;
+    text-align: center;
+    //border: 1px solid #5c0dca;
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+}
